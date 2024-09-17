@@ -12,6 +12,7 @@ MyAnalyzer.java - Has four tasks
   - Finds the average number of passengers on flights from PWM to Florida in 2009.
 
 MyDataReader - Reads the CSV file and uses lineToReport method to set elements of an array
+Cite: https://www.baeldung.com/java-csv-file-array 
 
 Program 1 - Testing of myDataReader to print out the first 10000 entries in the CSV file. 
 
