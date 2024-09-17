@@ -1,5 +1,10 @@
 import java.time.LocalDateTime;
 
+/**
+ * @author Jacob Craig & Troy Moscatelli
+ * @version 9/13/2024
+ *  Stores and initializes variables 
+ */
 public class Flight {
 
 	private Airport origin;
@@ -9,8 +14,15 @@ public class Flight {
 	private double distance;
 	private LocalDateTime flightDate;
 	
-	//constructor to initialize the object flight
 	
+	/**
+	 * @param origin - origin of the airport object
+	 * @param destination - destination of the airport object
+	 * @param passengers - amount of passengers
+	 * @param seats - amount of seats
+	 * @param distance - total distance
+	 * @param flightDate - date and time of flight
+	 */
 	public Flight(Airport origin, Airport destination, int passengers, int seats, double distance, LocalDateTime flightDate) {
 		this.origin = origin;
 		this.destination = destination;
@@ -75,3 +87,4 @@ public class Flight {
 	
 	
 }
+
