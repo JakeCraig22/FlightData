@@ -6,15 +6,28 @@ import java.util.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
     
+/**
+ * @Author Jacob Craig && Troy Moscatelli 
+ * @Version 9/16/2024
+ */
 public class MyDataReader {
 	
 	public static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd:HH");
 	
+	
+	/**
+	 * @param dateTimeString - Date on the file
+	 * @return Formatted date
+	 */
 	public static LocalDateTime dateConvert(String dateTimeString) {
 		return LocalDateTime.parse(dateTimeString, formatter);
 	}
 	
 	
+	/**
+	 * @param inputLine - splits elements in the array with a comma
+	 * @return the variables as part of the array in order
+	 */
 	private static Flight lineToReport(String inputLine) {
 		String[]items = inputLine.split(",");
 		String originName = items[0];
@@ -31,6 +44,12 @@ public class MyDataReader {
 	}
 	
 
+	/**
+	 * Made with the help of https://www.baeldung.com/java-csv-file-array
+	 * @param filePath - the CSV file to read
+	 * @return the array of flights from the CSV file
+	 * @throws FileNotFoundException
+	 */
 	public static Flight[] readFlightsFromFile(String filePath) throws FileNotFoundException{
 		int numFlights = 3000000; 
 		Flight[] flights = new Flight[numFlights];
@@ -52,4 +71,5 @@ public class MyDataReader {
 	}
 	
 }
+	
 	
